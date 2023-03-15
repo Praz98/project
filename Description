@@ -1,0 +1,31 @@
+Item Demand Forecasting 
+Problem Statement 
+Demand forecasts are fundamental to plan and deliver products and services. Accurate forecasting of demand can help the manufacturers to maintain appropriate stock which results in reduction in loss due to product not being sold and also reduces the opportunity cost (i.e. higher demand but less availability => opportunity lost). Despite such relevance, manufacturers have difficulty choosing which forecast model is the best for their use case. In this project, historical sales data corresponding to multiple(25) items sold in 10 stores are provided and participants are expected to come up with a best model to predict the future demand for products which results in maximum profit for the manufacturer. Predict the demand for the next 3 months at the item level (i.e. all the stores combined). 
+Data 
+The historical sales data is available here. The item, store and sales details are provided at the daily level for a period spanning 4 years. 
+Minimum Requirements 
+The end objective of the participant is to produce a model that gives the best prediction to the manufacturer. Such a model must include the seasonality of the items sold.
+
+
+Item_Demand_Forecasting
+A project on predicting the demand of items for a chain of stores
+Problem Overview
+How can time-series data of item sales be used to forecast the requirements of items in various store locations? We are given the time-series data representing the sales of 50 items at 10 stores for a period of 5 years. I am to use this data to predict the demand of each item in each store for the next three months.
+Client Case Study
+Suppose our client is a company like Walmart or Spencer, with multiple stores in a city and multiple items at each store. In order to save costs in transport and effective management of their item supplies, they need a reliable model to predict the demand for a particular item on a given day. It would be an added benefit for them if the model could flag out the anomalies that it wasn’t able to understand as well. This way, they can put domain experts on the problem to identify what might be the reason for those anomalies (maybe a festival or a holiday, etc). This is exactly what our model would deliver. And this would allow our clients to make more informed choices about their approach for item allocation across different stores, and also encourage efficient transportation and storage strategies.
+
+
+Data Used
+Data being used can be found here - https://www.kaggle.com/c/demand-forecasting-kernels-only/overview Its a clean dataset representing the sales of 50 items across 10 stores for a period of 5 years.
+Tasks
+The primary aim of the model is to use the given data to predict the item demand in the 10 stores for a period of rolling 3 months. Visualizing the features and their importance , as this is a regression problem statement we will be using all our basic models with respect to the regression concept and  find the confidence in our predictions against Mean Absolute Error, Mean Squared Error, etc. 
+Code Structure
+Data Preparation Part
+Parse the dataset according to timestamps Create plots to represent the data from various time chunks. Define data_split() for test train splits using cross-validation on a rolling basis.
+Data Visualization Part
+Data Visualisation Part Create a function plot_confidence() to plot the confidence intervals of the model against various evaluation metrics like MAE, MSE, etc. Create a function plot_anomalies() to plot the data and identify the anomalies. A list of anomalies is to be also returned by this function.
+Feature Generation
+Create a function feature_generator() to create the features for the linear regression model. Create a function to perform target encoding. Create a function to perform regularized prediction
+ML/DL Models
+Implement the regression models 
+
